@@ -15,14 +15,19 @@ class App:
         return a/b
 
     # 1. Verifica si una lista contiene un número primo
-    def contiene_numero_primo(lista):
-        
-        
+    def contiene_numero_primo(lista):  
         """
         Verifica si hay al menos un número primo en la lista.
         Retorna True si hay un número primo, de lo contrario, False.
         """
-        pass
+        def primo(num):
+         if num < 2:
+             return False
+         for i in range(2,int(num** 0.5)+1):
+             if num % i == 0:
+                 return False
+             return True 
+        return any(primo(num) for num in lista)
 
     # 2. Cuenta los números pares en un rango dado
     def contar_pares(inicio, fin):
@@ -31,7 +36,7 @@ class App:
         Cuenta la cantidad de números pares en el rango desde 'inicio' hasta 'fin' (inclusive).
         Retorna la cantidad de números pares.
         """
-        pass
+        return len([num for num in range(inicio,fin +1) if num % 2 == 0])
 
     # 3. Encuentra el número máximo en una lista que sea múltiplo de un valor dado
     def maximo_multiplo(lista, multiplo):
