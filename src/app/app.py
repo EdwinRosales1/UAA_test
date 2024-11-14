@@ -71,21 +71,24 @@ class App:
         Verifica si todos los elementos de la lista son únicos.
         Retorna True si son únicos, de lo contrario, False.
         """
-        pass
+        return len(lista) == len(set(lista))
 
     # 7. Calcula el factorial de un número sin usar recursión
     def calcular_factorial(numero):
         """
         Calcula y retorna el factorial de 'numero' usando un ciclo.
         """
-        pass
+        factorial = 1
+        for i in range(2,numero + 1):
+            factorial*= i
+        return factorial
 
     # 8. Cuenta la cantidad de vocales en una cadena
     def contar_vocales(cadena):
         """
         Cuenta y retorna la cantidad de vocales en la cadena.
         """
-        pass
+        return sum(1 for char in cadena.lower() if char in "aoeiu")
 
     # 9. Encuentra el segundo número mayor en una lista
     def segundo_mayor(lista):
@@ -93,11 +96,22 @@ class App:
         Encuentra y retorna el segundo número más grande en la lista.
         Si no existe, retorna None.
         """
-        pass
+        lista2 = lista(set(lista))
+        if len(lista2) < 2:
+            return None
+        lista2.sort()
+        return lista2[-2]
 
     # 10. Calcula la serie de Fibonacci hasta n términos
     def fibonacci(n):
         """
         Genera y retorna una lista con los primeros 'n' términos de la serie de Fibonacci.
         """
-        pass
+        if n <= 0:
+            return []
+        elif n == 1:
+            return [0]
+        fib = [0, 1]
+        for _ in range(2, n):
+            fib.append(fib[-1] + fib[-2])
+        return fib
