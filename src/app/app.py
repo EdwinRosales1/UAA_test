@@ -45,7 +45,9 @@ class App:
         Encuentra y retorna el valor máximo de la lista que es múltiplo del parámetro 'multiplo'.
         Si no hay múltiplos, retorna None.
         """
-        pass
+        multiplos = [num for num in lista if num % multiplo == 0]
+        return max(multiplos) if multiplos else None
+        
 
     # 4. Verifica si una palabra es palíndroma (se lee igual en ambos sentidos)
     def es_palindromo(palabra):
@@ -54,14 +56,14 @@ class App:
         Verifica si la palabra es un palíndromo (igual al leerla al revés).
         Retorna True si es palíndromo, de lo contrario, False.
         """
-        pass
+        return palabra == palabra[::-1]
 
     # 5. Calcula la suma de los primeros n números impares
     def suma_primeros_impares(n):
         """
         Calcula y retorna la suma de los primeros 'n' números impares.
         """
-        pass
+        return sum([2 * i + 1 for i in range (n) ])
 
     # 6. Verifica si todos los elementos de una lista son únicos
     def elementos_unicos(lista):
