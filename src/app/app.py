@@ -16,6 +16,8 @@ class App:
 
     # 1. Verifica si una lista contiene un número primo
     def contiene_numero_primo(lista):
+        
+        
         """
         Verifica si hay al menos un número primo en la lista.
         Retorna True si hay un número primo, de lo contrario, False.
@@ -24,6 +26,7 @@ class App:
 
     # 2. Cuenta los números pares en un rango dado
     def contar_pares(inicio, fin):
+        
         """
         Cuenta la cantidad de números pares en el rango desde 'inicio' hasta 'fin' (inclusive).
         Retorna la cantidad de números pares.
@@ -32,6 +35,7 @@ class App:
 
     # 3. Encuentra el número máximo en una lista que sea múltiplo de un valor dado
     def maximo_multiplo(lista, multiplo):
+        
         """
         Encuentra y retorna el valor máximo de la lista que es múltiplo del parámetro 'multiplo'.
         Si no hay múltiplos, retorna None.
@@ -40,6 +44,7 @@ class App:
 
     # 4. Verifica si una palabra es palíndroma (se lee igual en ambos sentidos)
     def es_palindromo(palabra):
+        
         """
         Verifica si la palabra es un palíndromo (igual al leerla al revés).
         Retorna True si es palíndromo, de lo contrario, False.
