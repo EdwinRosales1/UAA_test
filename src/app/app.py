@@ -6,7 +6,7 @@ class App:
         return a+b
 
     def resta(a,b):
-        return a-b
+        return a - b
 
     def multiplicacion(a,b):
         return a*b
@@ -96,7 +96,7 @@ class App:
         Encuentra y retorna el segundo número más grande en la lista.
         Si no existe, retorna None.
         """
-        lista2 = lista(set(lista))
+        lista2 = list(set(lista))
         if len(lista2) < 2:
             return None
         lista2.sort()
