@@ -18,7 +18,7 @@ class MyTester(unittest.TestCase):
         self.assertEqual(App.resta(1, -2), -1, "Error en la resta")
 
     def test_resta_2(self):
-        self.assertEqual(App.resta(10,5 ), 5, "Error en la resta")
+        self.assertEqual(App.resta(10,-5 ), -5, "Error en la resta")
 
     def test_multiplicacion_1(self):
         self.assertEqual(App.multiplicacion(1, 2), 2, "Error en la multiplicacion")
